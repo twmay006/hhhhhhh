@@ -1,6 +1,6 @@
-#Vue + Webpack 实现SPA应用文档#
+#Vue.js1.0 + Webpack 实现SPA应用文档#
 
-
+> 更新：vue.js已经出到了2.2版本了，因此最新学习可以查看基于vue2做的demo，地址：[notepad](https://github.com/lin-xin/notepad)
 
 ## 一、安装webpack ##
 
@@ -161,6 +161,17 @@ module：定义了对模块的处理逻辑，这里可以用loaders定义了一�
 	  "plugins": ["transform-runtime"]
 	}
 
+**5.创建项目目录**
+
+在根目录新建src文件夹，在src里新建main.js，此时我们的目录结构如下：
+
+	|	|-src
+	|	|	|-main.js
+	|	|-node_modules
+	|	|-webpack.config.js
+	|	|-package.json
+	|	|-.babelrc
+
 ## 二、使用webpack ##
 
 1.配置好webpack.config.js之后，命令行执行
@@ -199,6 +210,8 @@ module：定义了对模块的处理逻辑，这里可以用loaders定义了一�
 
 ## 四、使用Vue.js实现SPA应用 ##
 
+（注意：vue-router2的写法已经不同）
+
 在我们主要的main.js里
 
 	import Vue from 'vue';                    //引入vue
@@ -236,13 +249,20 @@ module：定义了对模块的处理逻辑，这里可以用loaders定义了一�
 
 下面，我们再来看看组件如何写？
 
-想看吗，请到github下载dome看看吧！下载地址：[https://github.com/lin-xin/webpack-vue](https://github.com/lin-xin/webpack-vue)
+想看吗，请到github下载dome看看吧！
+
+在本地目录下执行
+
+	git clone https://github.com/lin-xin/webpack-vue.git		// clone到本地
+	cd webpack-vue											// 进入目录
+	npm install												// 安装项目依赖
+	webpack-dev-server										// 开启本地服务器,访问localhost:8080
 
 
-
+**推荐查看：[notepad](https://github.com/lin-xin/notepad)
 
  * 作者：林鑫
  * 个人github:[https://github.com/lin-xin/](https://github.com/lin-xin/)
  * 团队github:[https://github.com/omwteam](https://github.com/omwteam)
- * 最后更新：2016-7-27
+ * 最后更新：2017-02-28
  
