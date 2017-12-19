@@ -1,0 +1,227 @@
+.box{
+    height: 100%;
+    width: 100%;
+}
+.menu-collapsed{
+    overflow: visible;
+    &>.el-submenu__title{
+        padding-left: 16px !important;
+    }
+    .base{
+        width: 55px;
+    }
+    .first{
+        &>.el-menu{
+            margin-left: 0;
+            border-left: 1px solid #536067;
+        }
+        &.is-active{
+            background: #29B0A3;
+        }
+    }
+    .second{
+        &>.el-menu{
+            left: -1px;
+            margin-left: 0;
+            position: relative;
+            border: 0;
+            border-left: 1px solid #536067;
+            display: block !important;
+            border-radius: 0;
+            transition: all 0s linear;
+        }
+        .el-icon-arrow-right:before{
+            content: "\E603";
+        }
+    }
+    .third{
+        padding-left: 36px !important;
+    }
+}
+.fs-16{
+    font-size: 16px;
+}
+.el-form{
+    &.el-form--label-top{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .el-form-item__label{
+            line-height: 1;
+            font-size: 12px;
+            color:#333;
+        }
+        .el-form-item__content{
+            width: 100%;
+        }
+    }
+    .el-input__inner{
+        font-size: 12px;
+    }
+    .el-form-item{
+        &.w50{ // 并排的表单
+            margin-right: 0;
+            padding-right: 20px;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        &.w100{ // 独占一行的表单
+            margin-right: 0;
+            padding-right: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        &.noLable{ // 没有label的表单
+            width: 100%;
+            .el-form-item__content{
+                width: 100%;
+            }
+        }
+        &.textarea{ // 有文本域的表单
+            .el-textarea{
+                height: 134px;
+            }
+        }
+        &.hasButton{ // 有两个按钮且按钮位于右侧，按钮为76px宽的表单
+            width: 100%;
+            padding-right: 20px;
+            .el-form-item__content{
+                display: flex;
+                justify-content: flex-end;
+                button{
+                    width: 76px;
+                }
+            }
+        }
+        &.el-form-item-div{ // 有两个按钮的表单，按钮位于中间，两按钮上的字数相等，按钮间相隔22px
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 0;
+            width: 100%;
+            padding-right: 20px;
+            button{
+                height: 36px;
+                font-size: 12px;
+                margin-left: 0;
+                &+button{
+                    margin-left: 22px;
+                }
+            }
+        }
+        &.the-disabled{ // 不可修改的表单
+            .el-input__inner{
+                background: #F2F2F2;
+                border: 1px solid #DDDDDD;
+                cursor: not-allowed;
+                color: #999;
+                height: 36px;
+                vertical-align: top;
+                line-height: 34px;
+                margin-top: 2px;
+            }
+        }
+    }
+    .el-textarea{
+        .el-textarea__inner{
+            height: 100%;
+        }
+    }
+    .el-form-item__content{ // 当有标签且标签与输入框在同一行时输入框的宽度
+        width: calc(100% - 120px);
+    }
+}
+.labelInTop{ // lable在输入框上面的表单
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .el-form-item__label{
+        display: block;
+        line-height: 12px;
+        font-size: 12px;
+        margin-bottom: 10px;
+        color:#333;
+    }
+    .el-form-item{
+        .el-form-item__content{
+            width: 100%;
+        }
+    }
+}
+.formPadding{
+    padding: 20px 0 20px 20px;
+}
+.el-table{
+    th,td{
+        color: #333;
+    }
+    .tableHeader{
+        height: 50px;
+        font-size: 12px;
+        font-weight: bold;
+        th.is-leaf{
+            border-bottom-color: #bbb;
+        }
+    }
+}
+.my_table{
+    th,td{
+        padding: 0;
+    }
+    &.el-table--border, &.el-table--group{
+        border: 0;
+        border-top: 1px solid #ddd;
+    }
+    &.el-table--border td, &.el-table--border th{
+        border-color: #ddd;
+    }
+    .cell{
+        line-height: 50px;
+        font-size: 12px;
+        padding: 0 20px !important;
+        button{
+            font-size: 12px;
+        }
+    }
+    .caret-wrapper{
+        float: right;
+        width: 10px;
+        height: 50px;
+        position: relative;
+        justify-content: center;
+        .sort-caret{
+            position: relative;
+            &.ascending{
+                top: 3px;
+            }
+            &.descending{
+                bottom: 3px;
+            }
+        }
+    }
+    &.el-table--border::after, &.el-table--group::after{
+        display: none;
+    }
+}
+.filters{ // 筛选框
+    padding: 20px 20px 23px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .filter{
+        // flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+    }
+    .el-input,.el-select{
+        width: 176px;
+        margin-right: 20px;
+    }
+    .searchbtn{
+        background: #29b0a3;
+        color: #fff;
+        width: 100px;
+        border: 0;
+    }
+}

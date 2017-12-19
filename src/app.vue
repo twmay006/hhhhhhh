@@ -1,8 +1,18 @@
 <template>
-    <div class="main">
-        <router-view 
-        keep-alive
-	      transition="fade"
-	      transition-mode='out-in'></router-view>
-    </div>
+  <div id="app">
+    <router-view/>
+  </div>
 </template>
+
+<script>
+export default {
+    name: 'app'
+};
+</script>
+
+<style>
+#app{
+    height: 100%;
+    width: 100%;
+}
+</style>

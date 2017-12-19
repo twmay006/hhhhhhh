@@ -1,35 +1,28 @@
 import Vue from 'vue';
-import VueResource from 'vue-resource';
-import VueRouter from 'vue-router';
+import app from './app';
+import router from './router';
+import store from './store/';
+import ElementUI from 'element-ui';
+import axios from 'axios';
+import { default as oauth } from './utils/oauth';
+import { default as errorHandler } from './utils/error-handler';
 
-import App from './app.vue';
-import home from './components/home.vue';
-import list from './components/list.vue';
-import hello from './components/hello.vue';
+import 'element-ui/lib/theme-chalk/index.css';
+import './assets/scss/style.scss';
+import './assets/fonts/iconfont.css';
 
-Vue.use(VueRouter);
-Vue.use(VueResource);
+Vue.config.productionTip = false;
 
-var app = Vue.extend(App);
+Vue.use(ElementUI);
 
-var router = new VueRouter();
+oauth.config(axios);
+errorHandler.config(axios, store, router);
 
-//配置路由
-router.map({
-    '/home':{
-        component:home
-    },
-    '/list':{
-        component:list
-    },
-    '/hello':{
-        component:hello
-    }
-})
-
-router.redirect({
-    '/':'home'
-})
-
-router.start(app,'#app');
-window.router = router;
+/* eslint-disable no-new */
+new Vue({
+    el: '#app',
+    router,
+    store,
+    template: '<app/>',
+    components: { app }
+});

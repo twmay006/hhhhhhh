@@ -1,0 +1,130 @@
+.el-container{
+    height: 100%;
+    background: #f5f5f5;
+}
+.box{
+    .flex-column{
+        flex-direction: column;
+    }
+    .el-main{
+        &>div{
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .card{
+            border:1px solid #ddd;
+            border-radius:5px;
+            background:#fff;
+            .um-title{
+                display: block;
+                padding:20px;
+                border-bottom:1px solid #DDD;
+                color: #333;
+                font-size:14px;
+            }
+            &+.card{
+                margin-top: 10px;
+            }
+        }
+        .el-input, .el-select{
+            height: 36px;
+            line-height: 36px;
+            box-sizing: border-box;
+            display: inline-flex;
+            align-items: center;
+            width: 100%;
+            .el-input__inner{
+                height: 100%;
+            }
+        }
+        .el-button:not([class~="medium"]):not([class~="small"]):not([class~="el-button--mini"]){
+            height: 36px;
+            line-height: 0;
+            box-sizing: border-box;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        .pagination-box{
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &>span{
+                font-size: 12px;
+                color: #666;
+            }
+            .el-input{
+                height: 24px;
+                width: 50px;
+            }
+            .el-pagination{
+                width: 512px;
+                text-align: right;
+            }
+        }
+        .el-input__prefix, .el-input__suffix{
+            width: 36px;
+        }
+    }
+}
+.el-header{
+    width: 100%;
+    background: #37474f;
+    border-bottom: 1px solid #4b5960;
+    padding: 0 20px;
+    color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .el-badge__content{
+        border: 0;
+    }
+}
+.aside{
+    .el-submenu .el-menu-item{
+        height: 38px;
+        line-height: 38px;
+    }
+    .first{
+        &>.el-submenu__title{
+            padding-left: 16px !important;
+        }
+        &.is-opened>.el-submenu__title{
+            color: #fff !important;
+        }
+    }
+    .el-submenu__title{
+        font-size: 14px;
+        height: 44px;
+        line-height: 44px;
+        i{
+            color: #fff;
+        }
+        &:hover{
+            background: transparent;
+        }
+    }
+    .second{
+        .el-submenu__title{
+            color: #d1d1d1;
+            height: 38px;
+            padding-left: 47px !important;
+            line-height: 38px;
+        }
+        &.is-opened .el-submenu__title{
+            color: #fffefe;
+        }
+    }
+}
+.menu-icon{
+    margin-right: 8px;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+}
+.el-form{
+    box-sizing: border-box;
+}
